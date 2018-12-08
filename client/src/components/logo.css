@@ -1,0 +1,7 @@
+.navbar-brand>img {
+    max-width: 30%;
+    height: auto;
+  }
+.navbar {
+    font-size: 14px;
+}
