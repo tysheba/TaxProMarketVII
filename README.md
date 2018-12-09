@@ -10,8 +10,6 @@
     <li>multer</li>
     </ul>
 
-   # additional packages to unstall under client folder
-    <ul>
-    <li> react</li>
-     <li> reactstrap</li>
-     </ul>
+    Additional packages to install under client
+    react
+    reactstrap

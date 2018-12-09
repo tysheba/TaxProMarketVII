@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import FormPro from "./../Form"
  
 const customStyles = {
   content : {
@@ -54,10 +55,8 @@ class ModalForm extends React.Component {
         >
  
           <h2 ref={subtitle => this.subtitle = subtitle}>Tax Professional Sign-up Form</h2>
-          <div>I am a modal</div>
           <form>
-            <input />
-            <button onClick={this.closeModal}>close</button>
+            <FormPro />
           </form>
         </Modal>
       </div>

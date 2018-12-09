@@ -50,7 +50,7 @@ router
   .route("articles")
   .get(function (req, res) {
     // Grab every document in the Articles collection
-    db.Article.find({})
+    db.Article.find({}).limit(5)
       .then(function (dbArticle) {
         // If we were able to successfully find Articles, send them back to the client
         res.json(dbArticle);

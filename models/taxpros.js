@@ -25,6 +25,8 @@ const TaxProSchema = new Schema({
     // Is a Tax Attorney
     taxAttDes: Boolean,
 
+    qualification: String,
+
     //Specify other designation
     otherDesignation: {
         type: String,

@@ -57,20 +57,8 @@ export default class FormPro extends React.Component {
                     <Col sm={10}>
                         <Input type="file" name="file" id="exampleFile" />
                         <FormText color="muted">
-                            This is some placeholder block-level help text for the above input.
-                            It's a bit lighter and easily wraps to a new line.
+                            Provide a description of your Qualifications
             </FormText>
-                    </Col>
-                </FormGroup>
-                <FormGroup row>
-                    <Label for="checkbox2" sm={2}>Checkbox</Label>
-                    <Col sm={{ size: 10 }}>
-                        <FormGroup check>
-                            <Label check>
-                                <Input type="checkbox" id="checkbox2" />{' '}
-                                Check me out
-              </Label>
-                        </FormGroup>
                     </Col>
                 </FormGroup>
                 <FormGroup check row>
