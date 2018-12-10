@@ -4,6 +4,15 @@ const apiRoutes = require("./api");
 const news = require("../models/Article")
 const db = require("./../models")
 
+
+// Basic route that sends the user first to the AJAX Page
+router
+.route("/")
+.get(function(req, res) {
+  // res.send("Welcome to Hot Restaurants!")
+  res.sendFile(path.join(__dirname, "./../public/index.html"));
+});
+
 // API Routes
 router
   .route('/taxpros')

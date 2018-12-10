@@ -4,7 +4,6 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const multer = require('multer');
-const ejs = require('ejs');
 const path = require('path')
 
 // Set Storage Engine
@@ -75,10 +74,8 @@ app.use(logger("dev"));
 // Use body-parser for handling form submissions
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+// Serve up static assets
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect to the Mongo DB
 const dbURI = require('./config/keys').mongoURI;
