@@ -64,15 +64,22 @@
                     <input id="title" name="title" type="text" placeholder="Title" class="form-control input-md">
                 </div>
             </div>
+            <div class="form-group">
+                <label for="qualification">Summary of Qualifications</label>
+                <textarea class="form-control" id="qualification" rows="3"></textarea>
+            </div>
 
             <div class="form-row form-group">
                 <div class="col-md-6">
+                    <label for="address">Office Address:</label>
                     <input id="address" name="address" type="text" placeholder="Address line" class="form-control input-md">
                 </div>
                 <div class="col-md-4">
+                    <label>City:</label>
                     <input id="city" name="city" type="text" placeholder="City" class="form-control input-md">
                 </div>
                 <div class="col-md-2">
+                    <label>State:</label>
                     <input id="state" name="state" type="text" placeholder="State Code" class="form-control input-md">
                 </div>
             </div>
@@ -81,6 +88,10 @@
                 <div class="form-group col-md-6">
                     <label for="zipcode">Zip Code:</label>
                     <input id="zipcode" name="zipcode" type="text" placeholder="Zip Code" class="form-control input-md">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="year">Year Started doing taxes:</label>
+                    <input id="year" name="year" type="text" placeholder="Year Started" class="form-control input-md">
                 </div>
             </div>
 
@@ -212,10 +223,13 @@
                     </div>
                 </div>
 
-                <form class="form-group" action="/upload" method="post" enctype="multipart/form-data">
-                    <label for="profileImage">Add a picture for your profile! Upload Image</label>
-                    <input name="profileImage" type="file" class="form-control-file" id="profileImage">
-                </form>
+                <div>
+                    <form class="form-group" action="/taxpros" method="post" enctype="multipart/form-data">
+                        <label for="profileImage">Add a picture for your profile! Upload Image</label>
+                        <input name="profileImage" type="file" class="form-control-file" id="profileImage">
+                    </form>
+                </div>
+
                 <button type="button" class="btn btn-primary" id="add-pro">Submit</button>
         </form>
 
@@ -304,16 +318,20 @@
                 validateForm();
                 var newPro = {
                     fName: $('input[name=fName]').val().trim(),
+                    title: $('input[name=title]').val().trim(),
+                    year: $('input[name=year]').val().trim(),
+                    qualification: $('input[name=qualification]').val().trim(),
                     zipcode: $('input[name=zipcode]').val().trim(),
                     officeAddress: $('input[name=address]').val().trim(),
+                    officeCity: $('input[name=city]').val().trim(),
+                    officeState: $('input[name=state]').val().trim(),
                     specializations: specArray,
                     services: servArray,
                     designations: designArray,
-                    profileImage: $("#profileImage").name
                 }
                 console.log(newPro)
                 // $.post("/taxpros", newPro, function (req, res) {
-                //     console.log(`new record for was submitted`)
+                //     console.log(`new record was submitted`)
 
 
             })

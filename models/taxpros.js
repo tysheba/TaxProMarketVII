@@ -15,15 +15,11 @@ const TaxProSchema = new Schema({
         trim: true,
         required: "Name is Required"
     },
+    title: String,
+
     profileImage: {
         type: String
     },
-    // Is a CPA
-    cpaDes: Boolean,
-    // Is an Enrolled Agent
-    eaDes: Boolean,
-    // Is a Tax Attorney
-    taxAttDes: Boolean,
 
     qualification: String,
 
@@ -37,9 +33,6 @@ const TaxProSchema = new Schema({
         required: "please enter office address"
     },
 
-    officeAddress2: {
-        type: String
-    },
     officeCity: {
         type: String,
     },
@@ -51,6 +44,16 @@ const TaxProSchema = new Schema({
         type: Number,
         required: true
     },
+
+    phoneNumber: {
+        type: String
+    },
+    email: {
+        type: String,
+        unique: true,
+        match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    },
+
     // Years in practice
     year: {
         type: Number,
