@@ -15,7 +15,7 @@ const TaxProSchema = new Schema({
         trim: true,
         required: "Name is Required"
     },
-    photoURL: {
+    profileImage: {
         type: String
     },
     // Is a CPA
@@ -28,9 +28,8 @@ const TaxProSchema = new Schema({
     qualification: String,
 
     //Specify other designation
-    otherDesignation: {
-        type: String,
-        trim: true
+    designations: {
+        type: Array
     },
 
     officeAddress: {

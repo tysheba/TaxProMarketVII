@@ -6,59 +6,6 @@ const routes = require("./routes");
 const multer = require('multer');
 const path = require('path')
 
-// Set Storage Engine
-const storage = multer.diskStorage({
-  destination: './public/uploads',
-  filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() +
-      path.extname(file.originalname));
-  }
-})
-
-// Init Upload variable
-
-const upload = multer({
-  storage: storage,
-  limits: { fileSize: 1000000 }, // size limit 1MB
-  fileFilter: function (req, file, cb) {
-    checkFileType(file, cb)
-  }
-}).single('profileImage')//name of the field
-
-// app.post('/uploads', (req, res) => {
-//   upload(req, res, (err) => {
-//     if (err) {
-//       console.log(err)
-//     } else {
-//       console.log(req.file)// info can be saved to mongodb
-//       res.send('')
-//     }
-//   })
-// })
-
-// Function check file type
-
-function checkFileType(file, cb) {
-  // Allowed extensions
-  const filetypes = /jpeg|jpg|png|gif/;
-  // check ext
-  const extname = filetypes.test(path.extname(file.originalname).toLowercase());
-  // check mime
-  const mimetype = filetypes.test(file.mimetype);
-
-  if (mimetype && extname) {
-    return cb(null, true);
-  } else {
-    cb('Error: Images Only!')
-  }
-}
-
-// Our scraping tools
-// Axios is a promised-based http library, similar to jQuery's Ajax method
-// It works on the client and on the server
-const axios = require("axios");
-const cheerio = require("cheerio");
-
 // Require all models
 const db = require("./models");
 
@@ -67,11 +14,48 @@ const PORT = process.env.PORT || 3001;
 // Initialize Express
 const app = express();
 
+
+
+// const upload = multer({
+//   storage: storage,
+//   limits: { fileSize: 1000000 }, // size limit 1MB
+//   fileFilter: function (req, file, cb) {
+//     checkFileType(file, cb)
+//   }
+// }).single('profileImage')//name of the field
+
+
+// // Function check file type
+
+// function checkFileType(file, cb) {
+//   // Allowed extensions
+//   const filetypes = /jpeg|jpg|png|gif/;
+//   // check ext
+//   const extname = filetypes.test(path.extname(file.originalname).toLowercase());
+//   // check mime
+//   const mimetype = filetypes.test(file.mimetype);
+
+//   if (mimetype && extname) {
+//     return cb(null, true);
+//   } else {
+//     cb('Error: Images Only!')
+//   }
+// }
+
+// Our scraping tools
+// Axios is a promised-based http library, similar to jQuery's Ajax method
+// It works on the client and on the server
+const axios = require("axios");
+const cheerio = require("cheerio");
+
+
+
 // Configure middleware
 
 // Use morgan logger for logging requests
 app.use(logger("dev"));
 // Use body-parser for handling form submissions
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve up static assets

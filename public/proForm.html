@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/sign-up.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md header">
+        <div class="container-fluid"><a class="navbar-brand" href="index.html"><img src="assets/img/Logo.png" alt="Logo">
+            </a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="news.html">News </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact.html">Contact </a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="sign-up.html"> Sign Up</a></li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
+                            aria-expanded="false" href="#"> <img src="assets/img/avatar.png" class="dropdown-image"></a>
+                        <div class="dropdown-menu dropdown-menu-right" role="menu"><a class="dropdown-item" role="presentation"
+                                href="#">Login </a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Form for Professional Sign-up -->
+
+    <div class="container">
+        <h1 style="text-align: center;">Tax Professional Sign-up Form</h1>
+        <h5 style="text-align:center; margin-bottom: 20px;">Complete the information below to create a profile</h5>
+        <hr>
+        <form action="/profile" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fullName">Full Name:</label>
+                    <input id="fname" name="fName" type="text" placeholder="Full Name" class="form-control input-md">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="fullName"> Title:
+                    </label>
+                    <input id="title" name="title" type="text" placeholder="Title" class="form-control input-md">
+                </div>
+            </div>
+
+            <div class="form-row form-group">
+                <div class="col-md-6">
+                    <input id="address" name="address" type="text" placeholder="Address line" class="form-control input-md">
+                </div>
+                <div class="col-md-4">
+                    <input id="city" name="city" type="text" placeholder="City" class="form-control input-md">
+                </div>
+                <div class="col-md-2">
+                    <input id="state" name="state" type="text" placeholder="State Code" class="form-control input-md">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="zipcode">Zip Code:</label>
+                    <input id="zipcode" name="zipcode" type="text" placeholder="Zip Code" class="form-control input-md">
+                </div>
+            </div>
+
+
+            <!-- Text input-->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="phonenumber">Business Phone Number:</label>
+                    <input id="phonenumber" name="phonenumber" type="text" placeholder="Phone number" class="form-control input-md">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Business Email Address:</label>
+                    <input id="email" name="email" type="text" placeholder="Email address" class="form-control input-md">
+                </div>
+            </div>
+
+            <!-- Multiple Checkboxes -->
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="specialization">Specializations:</label>
+                    <div>
+                        <div class="checkbox">
+                            <label for="specialization-0">
+                                <input type="checkbox" name="special1" id="specialization-0" value="General">
+                                General
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="specialization-1">
+                                <input type="checkbox" name="special2" id="specialization-1" value="Small Business">
+                                Small Business
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="specialization-2">
+                                <input type="checkbox" name="special3" id="specialization-2" value="Real Estate">
+                                Real Estate
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="specialization-3">
+                                <input type="checkbox" name="special4" id="specialization-3" value="Partnerships">
+                                Partnerships
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="specialization-4">
+                                <input type="checkbox" name="special5" id="specialization-4" value="Self-employed">
+                                Self-employed
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="services">Services:</label>
+                    <div>
+                        <div class="checkbox">
+                            <label for="services-0">
+                                <input type="checkbox" name="services1" id="services-1" value="Tax Planning">
+                                Tax Planning
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="services-1">
+                                <input type="checkbox" name="services2" id="services-2" value="Tax Preparation">
+                                Tax Preperation
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="services-2">
+                                <input type="checkbox" name="services3" id="services-3" value="Tax Resolution">
+                                Tax Resolution
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="services-3">
+                                <input type="checkbox" name="services4" id="services-4" value="Valuation Services">
+                                Valuation Services
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="services-4">
+                                <input type="checkbox" name="services5" id="services-5" value="Bookkeeping">
+                                Bookkeeping
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="services-5">
+                                <input type="checkbox" name="services6" id="services-6" value="Refund Loans">
+                                Refund Loans
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="services-6">
+                                <input type="checkbox" name="services7" id="services-7" value="Refund Transfer">
+                                Refund Transfer
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="services-7">
+                                <input type="checkbox" name="services8" id="services-8" value="e-Filing">
+                                e-Filing
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="designations">Designations:</label>
+                    <div>
+                        <div class="checkbox">
+                            <label for="designation-0">
+                                <input type="checkbox" name="design1" id="designation-0" value="CPA">
+                                CPA
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="designation-1">
+                                <input type="checkbox" name="design2" id="designation-1" value="EA">
+                                EA
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="designation-2">
+                                <input type="checkbox" name="design3" id="designation-2" value="CTP">
+                                CTP
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <form class="form-group" action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="profileImage">Add a picture for your profile! Upload Image</label>
+                    <input name="profileImage" type="file" class="form-control-file" id="profileImage">
+                </form>
+                <button type="button" class="btn btn-primary" id="add-pro">Submit</button>
+        </form>
+
+    </div>
+
+    <div class="footer">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Tax Preparation</a></li>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>TaxProMarket</h3>
+                        <p>We bring together clients and Tax Professionals.</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                                class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a
+                            href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">TaxProMarket © 2018</p>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            console.log("ready!")
+
+            // var fName = $("input#inputAddress").val().trim()
+            var fName = ""
+
+            function validateForm() {
+                if (fName === "") {
+                    alert("Full Name should not be blank");
+                    return false;
+                }
+            };
+
+            $("#add-pro").on("click", function () {
+                console.log('button clicked')
+                fName = $('input[name=fName]').val()
+                proImg = $('#profileImage').name
+                console.log(fName)
+                console.log(proImg)
+                var specArray = [];
+                for (i = 1; i < 6; i++) {
+                    if ($('input[name=special' + i + ']:checked').val()) {
+                        var specializations = $('input[name=special' + i + ']:checked').val();
+                        specArray.push(specializations);
+                    }
+
+                }
+                var servArray = [];
+                for (i = 1; i < 9; i++) {
+                    if ($('input[name=services' + i + ']:checked').val()) {
+                        var services = $('input[name=services' + i + ']:checked').val();
+                        servArray.push(services);
+                    }
+                }
+                var designArray = [];
+                for (i = 1; i < 9; i++) {
+                    if ($('input[name=design' + i + ']:checked').val()) {
+                        var designations = $('input[name=design' + i + ']:checked').val();
+                        servArray.push(designations);
+                    }
+                }
+                validateForm();
+                var newPro = {
+                    fName: $('input[name=fName]').val().trim(),
+                    zipcode: $('input[name=zipcode]').val().trim(),
+                    officeAddress: $('input[name=address]').val().trim(),
+                    specializations: specArray,
+                    services: servArray,
+                    designations: designArray,
+                    profileImage: $("#profileImage").name
+                }
+                console.log(newPro)
+                // $.post("/taxpros", newPro, function (req, res) {
+                //     console.log(`new record for was submitted`)
+
+
+            })
+        })
+    </script>
+</body>
+
+</html>
