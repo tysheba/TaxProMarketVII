@@ -67,18 +67,6 @@ router
       .then(dbModel => res.json(dbModel))
   });
 
-router
-.route('/clients')
-.get(function(req, res){
-  db.clients.find({})
-  .then(function (dbclients){
-    res.json(dbclients);
-    // console.log(dbclients);
-  })
-  .catch(function(err){
-    res.json(err)
-  });
-});
 
 router.use("/api", apiRoutes);
 

@@ -52,7 +52,7 @@
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown"
                             aria-expanded="false" href="#"> <img src="assets/img/avatar.png" class="dropdown-image"></a>
                         <div class="dropdown-menu dropdown-menu-right" role="menu"><a class="dropdown-item" role="presentation"
-                                href="#">Login </a></div>
+                                href="./Authentication/login.html">Login </a></div>
                     </li>
                 </ul>
             </div>
@@ -67,9 +67,26 @@
                         <p class="subtitle"> Experienced professionals are here to help you get the maximum refund
                             allowed by the tax laws.
                         </p>
-                        <p><button id="searchBtn" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#search-pro">Search
-                                for a Professional</button>
-                        </p>
+                        <!-- Search Form Start -->
+                        <div class="form-group" style="width: 40%; color: white; background-color: blue; margin: auto;">
+                            <label for="exampleFormControlSelect1" style="color:white; font-size: 12pt;">Search By:</label>
+                            <select class="form-control" id="search-by">
+                                <option>Location</option>
+                                <option>Name</option>
+                                <option>Credentials</option>
+                                <option>Services</option>
+                                <option>Specialization</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin: auto; margin-top: 20px; margin-bottom: 20px; width: 40%; color: black; background-color: blue; ">
+                            <label for="inputAddress" style="color:white; font-size: 12pt;">Enter Search Criteria</label>
+                            <input type="text" class="form-control" id="criteria">
+                        </div>
+
+                        <button type="button" class="btn btn-secondary btn-lg find-pro" id="find-pro1">Search For
+                            Professional</button>
+                        <!-- Search Form End -->
+
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -78,9 +95,25 @@
                         <p class="subtitle">Let the professionals help you make the right financial decisions to help
                             lower your tax bill.
                         </p>
-                        <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#search-pro">Search
-                                for a Professional</button>
-                        </p>
+                        <!-- Search Form Start -->
+                        <div class="form-group" style="width: 40%; color: black; background-color: blue; margin: auto;">
+                            <label for="exampleFormControlSelect1" style="color:white; font-size: 12pt;">Search By:</label>
+                            <select class="form-control" id="search-by">
+                                <option>Location</option>
+                                <option>Name</option>
+                                <option>Credentials</option>
+                                <option>Services</option>
+                                <option>Specialization</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin: auto; margin-top: 20px; margin-bottom: 20px; width: 40%; color: black; background-color: blue; ">
+                            <label for="inputAddress" style="color:white; font-size: 12pt;">Enter Search Criteria</label>
+                            <input type="text" class="form-control" id="criteria">
+                        </div>
+
+                        <button type="button" class="btn btn-secondary btn-lg find-pro" id="find-pro2">Search For
+                            Professional</button>
+                        <!-- Search Form End -->
                     </div>
                 </div>
                 <div class="carousel-item active">
@@ -88,9 +121,25 @@
                         <h1 class="title">Business Consulting</h1>
                         <p class="subtitle">Our professionals know about business. Find one today to help you
                             take your business to the next level</p>
-                        <p><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#search-pro">Search
-                                for a Professional</button>
-                        </p>
+                        <!-- Search Form Start -->
+                        <div class="form-group" style="width: 40%; color: black; background-color: blue; margin: auto;">
+                            <label for="exampleFormControlSelect1" style="color:white; font-size: 12pt;">Search By:</label>
+                            <select class="form-control" id="search-by">
+                                <option>Location</option>
+                                <option>Name</option>
+                                <option>Credentials</option>
+                                <option>Services</option>
+                                <option>Specialization</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin: auto; margin-top: 20px; margin-bottom: 20px; width: 40%; color: black; background-color: blue; ">
+                            <label for="inputAddress" style="color:white; font-size: 12pt;">Enter Search Criteria</label>
+                            <input type="text" class="form-control" id="criteria">
+                        </div>
+
+                        <button type="button" class="btn btn-secondary btn-lg find-pro" id="find-pro3">Search For
+                            Professional</button>
+                        <!-- Search Form End -->
                     </div>
                 </div>
             </div>
@@ -103,31 +152,11 @@
                 <li data-target="#carousel-1" data-slide-to="2" class="active"></li>
             </ol>
         </div>
-        <!-- Modal Form opens after Search for Professional is Clicked -->
-        
-                            <div class="form-group">
-                                <label for="exampleFormControlSelect1">Search By:</label>
-                                <select class="form-control" id="search-by">
-                                    <option>Location</option>
-                                    <option>Name</option>
-                                    <option>Credentials</option>
-                                    <option>Services</option>
-                                    <option>Specialization</option>
-                                </select>
-                            </div>
-                            <div class="form-group" style="margin-top: 20px;">
-                                <label for="inputAddress">Enter Search Criteria</label>
-                                <input type="text" class="form-control" id="criteria">
-                            </div>
-                        
-                            <button type="button" class="btn btn-primary" id="find-pro">Submit</button>
-           
-        <!-- End Modal -->
         <section class="section bg-grey-light p-t-60 p-b-20">
             <div class="container">
                 <div class="p-t-15">
                     <div class="heading-section heading-section-2">
-                        <h3>OUR SERVICES</h3>
+                        <h3>TAX PRO SERVICES</h3>
                     </div>
                 </div>
                 <div class="row">
@@ -138,7 +167,7 @@
                             </div>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="services-v1.html">Business Consulting</a>
+                                    <a href="#">Business Consulting</a>
                                 </h3>
                                 <p>Our professionals love working with small business. Bring all your questions to us.
                                     We
@@ -153,9 +182,10 @@
                             </div>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="services-v1.html">Tax Preparation</a>
+                                    <a href="#">Tax Preparation</a>
                                 </h3>
-                                <p>Qualified professionals ready to help you get all the money you deserve</p>
+                                <p>Qualified professionals ready to help you file an audit quality, accurate return
+                                    with the IRS</p>
                             </div>
                         </div>
                     </div>
@@ -166,10 +196,11 @@
                             </div>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="services-v1.html">Taxes Planning</a>
+                                    <a href="#">Taxes Planning</a>
                                 </h3>
-                                <p>Fusce at accumsan justo. Nulla lacus efficitur vel aliquam sed imperdiet auctor nisi
-                                    dictum ornare risus</p>
+                                <p>Our professionals know that tax planning is an essential part of a financial plan.
+                                    Reduction of tax liability and maximizing the ability to contribute to retirement
+                                    plans are crucial for success. </p>
                             </div>
                         </div>
                     </div>
@@ -180,10 +211,11 @@
                             </div>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="services-v1.html">e-filing</a>
+                                    <a href="#">e-Filing</a>
                                 </h3>
-                                <p>Donec malesuada urna porta tellus feugiat. Donec ultricies felis ipsum, at efficitur
-                                    tellus luctus eu.</p>
+                                <p>Our professionals are authorized and equipped to electronically file your returns
+                                    faster with
+                                    fewer errors.</p>
                             </div>
                         </div>
                     </div>
@@ -196,9 +228,8 @@
                                 <h3 class="title">
                                     <a href="services-v1.html">Bookkeeping</a>
                                 </h3>
-                                <p>Donec malesuada urna porta tellus feugiat, ac tempor tortor finibus lacus quam
-                                    rutrum
-                                    leo consectetur</p>
+                                <p>If your business is in need of bookkeeping services, we have professionals who can
+                                    help</p>
                             </div>
                         </div>
                     </div>
@@ -209,10 +240,12 @@
                             </div>
                             <div class="content">
                                 <h3 class="title">
-                                    <a href="services-v1.html">Refund Loans</a>
+                                    <a href="#">Refund Loans</a>
                                 </h3>
-                                <p>Donec malesuada urna porta tellus feugiat, ac tempor tortor ornare. At dui sit amet
-                                    massa ultricies ullamcorper</p>
+                                <p>Can't wait for your refund? Find a preparer who offers refund anticipation loans and
+                                    get
+                                    your money faster.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -261,31 +294,37 @@
             <div class="col-lg-12">
                 <h2 class="my-4">Meet The Professionals</h2>
             </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/tax pro 1.jpg">
-                <h3 class="m-0">John Smith</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/tax pro 5.jpg">
-                <h3 class="m-0">John Doe</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/tax pro 2.jpg">
-                <h3 class="m-0">Jane Doe</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/tax pro 4.jpg">
-                <h3 class="m-0">John Joe</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
-            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/tax pro 3.jpg">
-                <h3 class="m-0">Jane Joe</h3>
-                <h5 class="my-1">Job Title</h5>
-                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-            </div>
+
+                <!-- <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
+                        src="assets/img/tax pro 1.jpg">
+                    <h3 class="m-0">John Smith</h3>
+                    <h5 class="my-1">Job Title</h5>
+                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
+                        src="assets/img/tax pro 5.jpg">
+                    <h3 class="m-0">John Doe</h3>
+                    <h5 class="my-1">Job Title</h5>
+                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
+                        src="assets/img/tax pro 2.jpg">
+                    <h3 class="m-0">Jane Doe</h3>
+                    <h5 class="my-1">Job Title</h5>
+                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
+                        src="assets/img/tax pro 4.jpg">
+                    <h3 class="m-0">John Joe</h3>
+                    <h5 class="my-1">Job Title</h5>
+                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                </div> -->
+                <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
+                        src="assets/img/tax pro 3.jpg">
+                    <h3 class="m-0">Jane Joe</h3>
+                    <h5 class="my-1">Job Title</h5>
+                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+                </div>
             <!-- <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/tax pro 6.jpg">
                 <h3 class="m-0">Joe Doe</h3>
                 <h5 class="my-1">Job Title</h5>
@@ -327,51 +366,29 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
-
-        // Get the modal
-        var modal = document.getElementById('search-pro');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("searchBtn");
-
-        // // Get the <span> element that closes the modal
-        // var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // // When the user clicks on <span> (x), close the modal
-        // span.onclick = function () {
-        //     modal.style.display = "none";
-        // }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
         // Script to handle search for professional
         // Create a variable for the search criteria
         var field = ""
         var criteria = ""
 
         //On submit display query results
-        $("#find-pro").on("click", function () {
+        $(".find-pro").on("click", function () {
             field = $("#search-by").val().trim()
             criteria = $("#criteria").val().trim()
             console.log(`search ${field} for ${criteria}`)
             $("#criteria").val("")
             $("#search-pro").modal('hide')
+            $("#prodisplay").html("") // clear contents of div
+            var header = $("<div>").html("<h2 class='my-4'> Meet The Professionals </h2>").addClass("col-lg-12")
+                $("#prodisplay").append(header)
+                document.getElementById("prodisplay").scrollIntoView();
             // Get data from the taxpros collection in mongodb via the api
             $.get("/taxpros", function (data) {
-                console.log(data[0].zipcode);
-                var photURL = "assets/img/tax pro 6.jpg"
-                var $fName = $("<h3>").html("Tysheba L Morgan")
-                var $cred = $("<h5>").html("CPA, CIA, EA")
-                var $qual = $("<p>").html("Serving tax clients since 2008")
+                console.log(data[1].zipcode);
+                var photURL = data[1].photoURL
+                var $fName = $("<h3>").html(data[1].fName)
+                var $cred = $("<h5>").html(data[1].designations)
+                var $qual = $("<p>").html("Serving tax clients since "+ data[1].year)
                 var $proDiv = $("<div>").addClass("col-sm-6 col-lg-4 mb-4 text-center");
                 var $img = $("<img>").addClass("rounded-circle img-fluid d-block mx-auto").attr("src", photURL)
                 var proBlockHtml = $proDiv.append(
