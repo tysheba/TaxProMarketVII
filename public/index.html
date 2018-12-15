@@ -295,7 +295,7 @@
                 <h2 class="my-4">Meet The Professionals</h2>
             </div>
 
-                <!-- <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
+            <!-- <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
                         src="assets/img/tax pro 1.jpg">
                     <h3 class="m-0">John Smith</h3>
                     <h5 class="my-1">Job Title</h5>
@@ -319,17 +319,20 @@
                     <h5 class="my-1">Job Title</h5>
                     <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
                 </div> -->
-                <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto"
-                        src="assets/img/tax pro 3.jpg">
-                    <h3 class="m-0">Jane Joe</h3>
-                    <h5 class="my-1">Job Title</h5>
-                    <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
-                </div>
+            <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/tax pro 3.jpg">
+                <h3 class="m-0">Jane Joe</h3>
+                <h5 class="my-1">Job Title</h5>
+                <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
+            </div>
             <!-- <div class="col-sm-6 col-lg-4 mb-4 text-center"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/tax pro 6.jpg">
                 <h3 class="m-0">Joe Doe</h3>
                 <h5 class="my-1">Job Title</h5>
                 <p>What does this team member to? Keep it short! This is also a great spot for social links!</p>
             </div> -->
+        </div>
+
+        <div>
+            <div id="reactStarRating"></div>
         </div>
     </div>
     <div class="footer">
@@ -380,15 +383,15 @@
             $("#search-pro").modal('hide')
             $("#prodisplay").html("") // clear contents of div
             var header = $("<div>").html("<h2 class='my-4'> Meet The Professionals </h2>").addClass("col-lg-12")
-                $("#prodisplay").append(header)
-                document.getElementById("prodisplay").scrollIntoView();
+            $("#prodisplay").append(header)
+            document.getElementById("prodisplay").scrollIntoView();
             // Get data from the taxpros collection in mongodb via the api
             $.get("/taxpros", function (data) {
                 console.log(data[1].zipcode);
                 var photURL = data[1].photoURL
                 var $fName = $("<h3>").html(data[1].fName)
                 var $cred = $("<h5>").html(data[1].designations)
-                var $qual = $("<p>").html("Serving tax clients since "+ data[1].year)
+                var $qual = $("<p>").html("Serving tax clients since " + data[1].year)
                 var $proDiv = $("<div>").addClass("col-sm-6 col-lg-4 mb-4 text-center");
                 var $img = $("<img>").addClass("rounded-circle img-fluid d-block mx-auto").attr("src", photURL)
                 var proBlockHtml = $proDiv.append(
@@ -404,6 +407,12 @@
 
 
     </script>
+    <!-- Load React. -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
 </body>
 
 </html>
