@@ -2,24 +2,29 @@
 
 const e = React.createElement;
 
-class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-  }
-
+class FormComponent extends React.Component {
   render() {
-    if (this.state.liked) {
-      return 'You liked this.';
-    }
-
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
+    return (
+      <form target="_self" method="Get">
+        <StarRating name="rating" caption="Rate Your Pro!" size={30} totalStars={5} onRatingClick={handleRatingClick} />
+        <button type="submit" className="btn btn-primary">Submit Rating</button>
+      </form>
     );
   }
+
+  // handler in react class
+
+  handleRatingClick = () => {
+    const newRating = this.state.currentRating + 1;
+    this.setState({
+      currentRating: newRating
+    });
+
+    alert('You left a ' + data.rating + ' star rating for ' + data.caption);
+  };
 }
+
+  React.render(<FormComponent />, document.getElementById('star-rating'));
 
 const domContainer = document.querySelector('#reactStarRating');
 ReactDOM.render(e(LikeButton), domContainer);
