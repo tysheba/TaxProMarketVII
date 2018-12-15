@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>News</title>
+    <title>Profile Page</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/header.css">
+    <style>
+        img{
+            max-width:364px;
+            max-height: 364px;
+        }
+        
+        </style>
 
 </head>
 
@@ -38,18 +45,66 @@
             </div>
         </div>
     </nav>
-    <div class="news">
+    <div style="width: 100%; height: 500px;" class="container">
+        <div id="tax_pro_profile">
+            <!-- page content / start-->
+    <div class="page-content p-b-50">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
-                    <div class="intro">
-                        <h1 class="text-center">Tax News</h1>
-                        <p class="text-center"> </p>
-                    </div>
-                    <div class="text" id="latest-news">
+                <div class="col-md-8">
+                    <section class="section post-section-1 m-b-30">
+                        <div class="post-content" id="proDetail">
+                            <h4 class="text-block text-bold text-black text-med-large m-b-30">Philip Barnett</h4>
+                            <p class="text-block text-grey-1 m-b-30">Chief Executive Officer</p>
+                            <p class="text-block m-b-30">
+                                Summary of Qualifications
+                            </p>
+                
+                            <p class="text-block">
+                                Services:
+                                Specializations:
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <div class="image image-border m-b-20">
+                            <img class="img-responsive" src="uploads/brookscpa.jpg" alt="leadership">
+                        </div>
+                        <div class="social-list m-b-20">
+                            <ul class="horizontal-list">
+                                <li class="social-item-1 social-item-4 text">
+                                    <span>CONNECT VIA</span>
+                                </li>
+                                <li class="social-item-1 social-item-4">
+                                    <a class="fa fa-linkedin-square" href="#"></a>
+                                </li>
+                                <li class="social-item-1 social-item-4">
+                                    <a class="fa fa-facebook-square" href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="text-block" id="phone">Phone: (+1) 96 800 888</p>
+                        <p class="text-block" id="proEmail">Email: johndoe@email.com</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <!-- page content / end-->
+    <!-- call to action / start-->
+    <div class="section bg-primary p-t-25 p-b-25 cta-section-1 cta-section-2">
+        <div class="container">
+            <div class="block-left">
+                <p class="text-block text-med">Looking for a first-class financial advisor?</p>
+            </div>
+            <div class="block-right">
+                <a class="au-btn au-btn-border au-btn-border-light" href="#">Get A Free Quote</a>
+            </div>
+        </div>
+    </div>
+    <!-- call to action / end-->
         </div>
     </div>
 
@@ -85,29 +140,16 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
 
-       $( document ).ready(function() {
-            
-            // QUESTION: What does $.get do? What are the parameters it is expecting?
-            $.get("/articles", function (data) {
-                console.log(data);
-                if (data) {
-                    for (i=0; i<10; i++) {
-                        var taxnewsdata = ` <h3> ${data[i].title} </h3>
-                         <strong>Summary:</strong> ${data[i].summary} <br>
-                        <a href =${data[i].link}> ${data[i].link}</a>
-                        <br> <br>`
-                        $("#latest-news").append(taxnewsdata);
-                    }
-                    
-                }
-                else {
-                    $("#latest-news").text("No news found");
-                }
-            });
-        });
-    </script>
+    <!-- Load React -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js" -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="http://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+   <script src = "assets/js/app.js"></script>
+
+    <!-- Load our React component -->
+   
 </body>
 
 </html>

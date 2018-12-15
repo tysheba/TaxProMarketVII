@@ -10,7 +10,7 @@ router
 
 
 router
-  .route("/:id")
+  .route("/taxpros/:id")
   .get(taxproController.findById)
   .put(taxproController.update)
   .delete(taxproController.remove);

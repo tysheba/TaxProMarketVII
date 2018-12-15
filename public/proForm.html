@@ -20,6 +20,14 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <style>
+        img{
+            max-width:180px;
+        }
+        input[type=file]{
+            padding:10px;
+            background:#2d2d2d;}
+        </style>
 </head>
 
 <body>
@@ -52,7 +60,7 @@
         <h1 style="text-align: center;">Tax Professional Sign-up Form</h1>
         <h5 style="text-align:center; margin-bottom: 20px;">Complete the information below to create a profile</h5>
         <hr>
-        <form action="/profile" method="post" enctype="multipart/form-data">
+        <form action="/profile" method="post" enctype="multipart/form-data" id="proFormData">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="fullName">Full Name:</label>
@@ -64,9 +72,16 @@
                     <input id="title" name="title" type="text" placeholder="Title" class="form-control input-md">
                 </div>
             </div>
-            <div class="form-group">
-                <label for="qualification">Summary of Qualifications</label>
-                <textarea class="form-control" id="qualification" rows="3"></textarea>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="Facebook">Facebook URL:</label>
+                    <input id="facebookAddr" name="facebook" type="text" placeholder="Enter Facebook URL" class="form-control input-md">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="LinkedIn"> LinkedIn URL:
+                    </label>
+                    <input id="linkedInAddr" name="linkedIn" type="text" placeholder="Enter LinkedIn URL" class="form-control input-md">
+                </div>
             </div>
 
             <div class="form-row form-group">
@@ -224,16 +239,37 @@
                 </div>
 
                 <div>
-                    <form class="form-group" action="/taxpros" method="post" enctype="multipart/form-data">
+                    <!-- <form class="form-group" action="/taxpros" method="post" enctype="multipart/form-data">
                         <label for="profileImage">Add a picture for your profile! Upload Image</label>
                         <input name="profileImage" type="file" class="form-control-file" id="profileImage">
-                    </form>
+                    </form> -->
+                    <input type='file' onchange="readURL(this);" />
+                    <img id="blah" src="http://placehold.it/180" alt="your image" />
                 </div>
 
-                <button type="button" class="btn btn-primary" id="add-pro">Submit</button>
+                <button type="button" class="btn btn-primary" id="add-pro" data-toggle="modal" data-target="#mymodal">Submit</button>
         </form>
 
     </div>
+
+    <div class="modal" id="mymodal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Welcome to Tax Pro Market</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Thank you for adding your profile.  Check out the latest Tax News from the IRS.</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="./news.html"><button type="button" class="btn btn-secondary" >Close</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
 
     <div class="footer">
         <footer>
@@ -273,6 +309,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script type="text/javascript">
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 
         $(document).ready(function () {
             console.log("ready!")
@@ -320,7 +369,8 @@
                     fName: $('input[name=fName]').val().trim(),
                     title: $('input[name=title]').val().trim(),
                     year: $('input[name=year]').val().trim(),
-                    qualification: $('input[name=qualification]').val().trim(),
+                    facebook: $('input[name=facebook]').val().trim(),
+                    linkedIn: $('input[name=linkedIn]').val().trim(),
                     zipcode: $('input[name=zipcode]').val().trim(),
                     officeAddress: $('input[name=address]').val().trim(),
                     officeCity: $('input[name=city]').val().trim(),
@@ -332,6 +382,11 @@
                 console.log(newPro)
                 // $.post("/taxpros", newPro, function (req, res) {
                 //     console.log(`new record was submitted`)
+
+                // alert("Thank you for adding your profile! Check out the latest Tax News")
+                document.getElementById("proFormData").reset();
+
+                // window.location.href = "./news.html";
 
 
             })
