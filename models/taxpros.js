@@ -18,10 +18,12 @@ const TaxProSchema = new Schema({
     title: String,
 
     profileImage: {
-        type: String
+        type: String,
+        default: "http://placehold.it/180"
     },
 
-    qualification: String,
+    facebook: String,
+    linkedIn: String,
 
     //Specify other designation
     designations: {
@@ -46,19 +48,20 @@ const TaxProSchema = new Schema({
     },
 
     phoneNumber: {
-        type: String
+        type: String,
+        default: "(555) 555-5555"
     },
     email: {
         type: String,
         unique: true,
-        match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+        match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
+        default: "email@realemail.com"
     },
 
     // Years in practice
     year: {
-        type: Number,
-        min: 4,
-        max: 4
+        type: String,
+        default: "the 2000's"
     },
     // Services
     //Bookkeeping, Tax planning, Tax preparation, Tax Resolution, valuation services, refund loans, refund transfer, e-filin

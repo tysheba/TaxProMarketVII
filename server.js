@@ -16,32 +16,6 @@ const app = express();
 
 
 
-// const upload = multer({
-//   storage: storage,
-//   limits: { fileSize: 1000000 }, // size limit 1MB
-//   fileFilter: function (req, file, cb) {
-//     checkFileType(file, cb)
-//   }
-// }).single('profileImage')//name of the field
-
-
-// // Function check file type
-
-// function checkFileType(file, cb) {
-//   // Allowed extensions
-//   const filetypes = /jpeg|jpg|png|gif/;
-//   // check ext
-//   const extname = filetypes.test(path.extname(file.originalname).toLowercase());
-//   // check mime
-//   const mimetype = filetypes.test(file.mimetype);
-
-//   if (mimetype && extname) {
-//     return cb(null, true);
-//   } else {
-//     cb('Error: Images Only!')
-//   }
-// }
-
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
